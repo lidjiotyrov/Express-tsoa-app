@@ -1,0 +1,8 @@
+node_modules
+dist
+.history
+.idea
+src/routes/routes.ts
+coverage
+.env.example
+.npm/*
