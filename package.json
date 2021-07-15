@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -x ts-node src/main.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsoa:swagger": "tsoa swagger",
+    "tsoa:swagger:dist": "tsoa swagger -c tsoa-dist.json",
+    "tsoa:routes": "tsoa routes",
+    "start": "nodemon -x ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsoa spec-and-routes && tsc",
+    "start:dev": "npm run tsoa:routes && npm run tsoa:swagger && ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^4.0.0",
+    "mongoose": "^5.13.2",
     "ts-node": "^10.1.0",
     "tsoa": "^3.8.0",
     "typescript": "^4.3.5"
