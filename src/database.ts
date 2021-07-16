@@ -9,7 +9,8 @@ export const databaseConfig = {
     useNewUrlParser: true,
     synchronize: true,
     logging: true,
-    entities: ["src/**/*.*"]
+    entities: ["src/warehouses/*.entity.ts"],
+    ssl:true
 }
 
 export class DatabaseManager {
