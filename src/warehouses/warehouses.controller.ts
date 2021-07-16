@@ -13,6 +13,7 @@ import {
 } from "tsoa";
 import {WarehousesService} from "./warehouses.service";
 import {WarehousesEntity} from "./warehouses.entity";
+import {WarehousesOutput} from "./warehouses.dto";
 
 
 
@@ -25,7 +26,7 @@ export class WarehousesController extends Controller{
 
   @SuccessResponse(200, 'OK')
   @Get('/warehouses')
-  async getAll(): Promise<WarehousesEntity[]> {
+  async getAll(): Promise<WarehousesOutput[]> {
     return this._warehousesService.getAll()
   }
 }
