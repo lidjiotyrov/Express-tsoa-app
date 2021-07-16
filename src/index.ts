@@ -2,7 +2,7 @@ import { app } from "./app";
 import * as http from 'http';
 import databaseManager from './database'
 
-const PORT = 8080
+const PORT = 4040
 const server = http.createServer(app)
 server.listen(PORT)
 server.on('listening',

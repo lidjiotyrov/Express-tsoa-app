@@ -5,11 +5,9 @@ import { MongoConnectionOptions } from "typeorm/driver/mongodb/MongoConnectionOp
 
 export const databaseConfig = {
   type: "mongodb" as const,
-    url: "mongodb+srv://lidji:123qwe987@cluster0.fyoyi.mongodb.net/db?retryWrites=true&w=majority",
-    useNewUrlParser: true,
+    url: "mongodb+srv://lidji:1997Lidzhi1997Warcraft1997@cluster1.fyoyi.mongodb.net/rt?retryWrites=true&w=majority",
     synchronize: true,
-    logging: true,
-    entities: ["src/warehouses/*.entity.ts"],
+  entities: [__dirname + '/../**/*.entity.{js,ts}'],
     ssl:true
 }
 

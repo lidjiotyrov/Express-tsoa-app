@@ -1,5 +1,5 @@
 import {requestLoggerMiddleware} from "./request.logger.middleware";
-import {RegisterRoutes} from "../build/routes";
+import {RegisterRoutes} from "./routes";
 import swaggerUi from 'swagger-ui-express'
 
 const express = require('express');
