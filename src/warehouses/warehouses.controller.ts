@@ -1,19 +1,11 @@
 import {
   Route,
   Controller,
-  Get,
-  Put,
   Post,
-  Delete,
-  Security,
-  Query,
-  Body,
-  Response,
   Tags, SuccessResponse
 } from "tsoa";
 import {WarehousesService} from "./warehouses.service";
-import {WarehousesEntity} from "./warehouses.entity";
-import {WarehousesOutput} from "./warehouses.dto";
+import {verify} from "./VerificationService";
 
 
 
@@ -25,8 +17,8 @@ export class WarehousesController extends Controller{
   }
 
   @SuccessResponse(200, 'OK')
-  @Get('/warehouses')
-  async getAll(): Promise<WarehousesOutput[]> {
-    return this._warehousesService.getAll()
+  @Post('/warehouses')
+  async getAll(): Promise<(requestId: any, encryptedFile: any) => Promise<any>> {
+    return verify
   }
 }
